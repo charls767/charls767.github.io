@@ -1,0 +1,72 @@
+/* tech-badges.component.css */
+.tech-container {
+  padding: 20px;
+  border-radius: 8px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.tech-title {
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+
+.tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tech-badge {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.tech-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.1);
+}
+
+.tech-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  border-radius: 3px;
+  object-fit: contain;
+  filter: brightness(1.1);
+}
+
+.tech-name {
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .tech-badges {
+    justify-content: center;
+  }
+  
+  .tech-badge {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+  
+  .tech-icon {
+    width: 16px;
+    height: 16px;
+  }
+}
