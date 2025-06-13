@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "charls767.github.io": {
+    "charls767App": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "outputPath": "dist/charls767App",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
@@ -56,10 +57,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Proyecto1:build:production"
+              "buildTarget": "charls767App:build:production"
             },
             "development": {
-              "buildTarget": "Proyecto1:build:development"
+              "buildTarget": "charls767App:build:development"
             }
           },
           "defaultConfiguration": "development"
