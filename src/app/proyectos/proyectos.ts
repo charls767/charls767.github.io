@@ -41,7 +41,7 @@ export class Proyectos {
     },
     {
       id: 2,
-      title: 'Hackeo Matrix',
+      title: 'E-Commerce ',
       subtitle: 'Mi obra maestra',
       description: 'Migración del Matrix al mundo real y hackeo del sistema ficticio para salvar a la humanidad.',
       imagePath: 'assets/images/matrix-hack.jpg',
