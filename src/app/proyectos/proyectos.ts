@@ -27,9 +27,9 @@ export class Proyectos {
   projects: Project[] = [
     {
       id: 1,
-      title: 'Gestor Termodinámico',
+      title: 'Calculador de propiedades termodinámicas',
       subtitle: 'Software cientifico',
-      description: 'Aplicación para gestionar, calcular y visualizar ensayos de laboratorio termodinámico.',
+      description: ' Calculadora de propiedades termodinámicas utilizando Python y Django.',
       imagePath: 'images/example1.png',
       iconPath: 'images/py.png',
       technologies: [

@@ -13,8 +13,30 @@
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  animation: spin 2s linear infinite, float 3s ease-in-out infinite;
+  display: block;
+  margin: auto;
 }
 
+/* Giro rápido */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Flotación hacia arriba y abajo */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
 .header {
   display: flex;
   flex-direction: column;
