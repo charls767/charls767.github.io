@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Proyecto1": {
+    "charls767.github.io": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "outputPath": "dist/charls767.github.io",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
@@ -56,10 +57,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Proyecto1:build:production"
+              "buildTarget": "charls767.github.io:build:production"
             },
             "development": {
-              "buildTarget": "Proyecto1:build:development"
+              "buildTarget": "charls767.github.io:build:development"
             }
           },
           "defaultConfiguration": "development"
