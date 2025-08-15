@@ -4,10 +4,12 @@ import {HeaderComponent} from './head/header/header'
 import { AboutMe } from './about-me/about-me';
 import { Tecnologias } from './tecnologias/tecnologias';
 import { Proyectos } from './proyectos/proyectos';
+import { Formacion } from './formacion/formacion';
+import { BotonScroll } from './boton-scroll/boton-scroll';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,HeaderComponent,AboutMe,Tecnologias,Proyectos],
+  imports: [RouterOutlet,HeaderComponent,AboutMe,Tecnologias,Proyectos,Formacion,BotonScroll],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

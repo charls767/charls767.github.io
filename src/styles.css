@@ -2,18 +2,66 @@
 :root{
     color-scheme: light dark;
 }
-body{
-    font-family:'Courier New', Courier, monospace;
-    font-size: medium;
+
+body {
+  
+  font-family:'Courier New', Courier, monospace;
+  font-size: medium;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  transition: background-image 0s, background-color 0.7s ease;
 }
+
+/* Aplica la imagen y la animación tipo parpadeo */
+body.flash-effect {
+  animation: flashBlink 0.4s ease-in-out;
+  background-image: url('/images/C_Mural.png');
+}
+
+/* ⚡ Parpadeo rápido con la imagen visible y luego se apaga */
+@keyframes flashBlink {
+  0%   { background-image: none; }
+  20%  { background-image: url('/images/C_Mural.png'); }
+  40%  { background-image: none; }
+  60%  { background-image: url('/images/C_Mural.png'); }
+  100% { background-image: none; }
+}
+/* Animación que imita el flash con salida suave */
+@keyframes flashFade {
+  0% {
+    filter: brightness(1.5);
+  }
+  20% {
+    filter: brightness(1);
+  }
+  100% {
+    filter: brightness(0);
+    background-image: none;
+  }
+}
+
 .header-container {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem; /* espacio entre texto e imagen */
-  padding: 2rem;
+  z-index: 1000;
 }
 
 .header-content {
   text-align: left;
+}
+.PrimerPlano {
+  background-color: #121212;
+  max-width: 750px;
+  margin: 40px auto;
+}
+.AlgoSobreMi {
+  background-color: #121212;
+  max-width: 750px;
+  margin: 40px auto;
+  padding: 1px;
+  z-index: 1000;
 }

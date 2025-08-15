@@ -1,0 +1,16 @@
+<section>
+  <h2>Formación</h2>
+<div *ngFor="let item of formaciones" class="educacion-item">
+
+    <div class="icono">{{ item.icono }}</div>
+    <div class="info">
+      <strong>{{ item.titulo }}</strong>
+      <div>{{ item.descripcion }}</div>
+      <small>{{ item.subdescripcion }}</small>
+    </div>
+    <div class="estado">
+      <span class="estado-texto">{{ item.estado }}</span>
+      <span class="estado-icono">{{ item.escudo }}</span>
+    </div>
+  </div>
+</section>

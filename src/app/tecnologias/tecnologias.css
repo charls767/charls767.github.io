@@ -3,7 +3,7 @@
   padding: 20px;
   border-radius: 8px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
@@ -11,60 +11,93 @@
 
 .tech-title {
   color: white;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 600;
-  margin-bottom: 16px;
-  margin-top: 0;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.tech-box {
+  background-color: #1f1f1f;
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.tech-box:hover {
+  box-shadow: 0 0 10px rgba(102, 255, 255, 0.8),
+              0 0 20px rgba(102, 255, 255, 0.6);
+  transform: translateY(-2px) scale(1.05);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+
+.category-title {
+  color: #dfe5e9;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-align: center;
 }
 
 .tech-badges {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 8px;
+  justify-content: center;
 }
 
 .tech-badge {
   display: flex;
   align-items: center;
-  padding: 8px 16px;
+  padding: 6px 12px;
   border-radius: 20px;
   color: white;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
   border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
 }
 
 .tech-badge:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   filter: brightness(1.1);
 }
 
 .tech-icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 8px;
-  border-radius: 3px;
+  width: 18px;
+  height: 18px;
+  margin-right: 6px;
   object-fit: contain;
-  filter: brightness(1.1);
 }
 
 .tech-name {
   white-space: nowrap;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
-  .tech-badges {
-    justify-content: center;
+  .tech-grid {
+    grid-template-columns: 1fr 1fr;
   }
-  
+}
+
+@media (max-width: 480px) {
+  .tech-grid {
+    grid-template-columns: 1fr;
+  }
+
   .tech-badge {
     font-size: 12px;
-    padding: 6px 12px;
+    padding: 5px 10px;
   }
-  
+
   .tech-icon {
     width: 16px;
     height: 16px;

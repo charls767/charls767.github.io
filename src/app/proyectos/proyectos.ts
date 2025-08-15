@@ -30,14 +30,15 @@ export class Proyectos {
       title: 'Calculador de propiedades termodinámicas',
       subtitle: 'Software cientifico',
       description: ' Calculadora de propiedades termodinámicas utilizando Python y Django.',
-      imagePath: 'images/example1.png',
-      iconPath: 'images/py.png',
+      imagePath: 'images/LogoTermolab-Photoroom.png', /*   'images/LogoTermolab-Photoroom.png'*/
+      iconPath: 'images/IconTermolab.PNG', /* Aqui poner el icono de Termolab  */
       technologies: [
-        { name: 'Python', iconPath: 'images/py.png' }, 
-        { name: 'Django', iconPath: 'images/django.png' }
+        { name: 'Python', iconPath: 'svg/python.svg' }, 
+        { name: 'FastAPI', iconPath: 'svg/fastapi.svg' },
+        { name: 'Angular', iconPath: 'svg/angular.svg' }
       ],
-      demoUrl: 'https://demo.example.com',
-      codeUrl: 'https://github.com/user/project'
+      demoUrl: 'https://demo.example.com', /* Aqui poner el githubPages  */
+      codeUrl: 'https://github.com/charls767/TermoLab'/* Aqui poner el github  */ 
     },
     {
       id: 2,
@@ -51,7 +52,9 @@ export class Proyectos {
       ],
       demoUrl: 'https://matrix.example.com'
     }
+    
   ];
+
 
   // Método para agregar nuevo proyecto
   addProject(project: Project): void {

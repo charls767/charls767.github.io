@@ -1,18 +1,25 @@
 <div class="tech-container">
   <h2 class="tech-title">Tecnologías</h2>
-  <div class="tech-badges">
-    <div 
-      *ngFor="let tech of technologies" 
-      class="tech-badge"
-      [style.background-color]="tech.color"
-    >
-      <img 
-        [src]="tech.iconPath" 
-        [alt]="tech.name + ' icon'"
-        class="tech-icon"
-        (error)="onImageError($event)"
-      >
-      <span class="tech-name">{{ tech.name }}</span>
+
+  <div class="tech-grid">
+    <div class="tech-box" *ngFor="let category of techCategories">
+      <h3 class="category-title">{{ category.name }}</h3>
+      
+      <div class="tech-badges">
+        <div 
+          *ngFor="let tech of category.technologies" 
+          class="tech-badge"
+          [style.background-color]="tech.color"
+        >
+          <img 
+            [src]="tech.iconPath" 
+            [alt]="tech.name + ' icon'"
+            class="tech-icon"
+            (error)="onImageError($event)"
+          >
+          <span class="tech-name">{{ tech.name }}</span>
+        </div>
+      </div>
     </div>
   </div>
 </div>
