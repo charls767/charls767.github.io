@@ -26,32 +26,35 @@ interface Project {
 export class Proyectos {
   projects: Project[] = [
     {
-      id: 1,
-      title: 'Calculador de propiedades termodinámicas',
-      subtitle: 'Software cientifico',
-      description: ' Calculadora de propiedades termodinámicas utilizando Python y Django.',
-      imagePath: 'images/LogoTermolab-Photoroom.png', /*   'images/LogoTermolab-Photoroom.png'*/
-      iconPath: 'images/IconTermolab.PNG', /* Aqui poner el icono de Termolab  */
-      technologies: [
-        { name: 'Python', iconPath: 'svg/python.svg' }, 
-        { name: 'FastAPI', iconPath: 'svg/fastapi.svg' },
-        { name: 'Angular', iconPath: 'svg/angular.svg' }
-      ],
-      demoUrl: 'https://demo.example.com', /* Aqui poner el githubPages  */
-      codeUrl: 'https://github.com/charls767/TermoLab'/* Aqui poner el github  */ 
-    },
-    {
-      id: 2,
-      title: 'E-Commerce ',
-      subtitle: 'Mi obra maestra',
-      description: 'Migración del Matrix al mundo real y hackeo del sistema ficticio para salvar a la humanidad.',
-      imagePath: 'assets/images/matrix-hack.jpg',
-      iconPath: 'images/py.png',
-      technologies: [
-        { name: 'Binario', iconPath: 'assets/icons/binary.png' }
-      ],
-      demoUrl: 'https://matrix.example.com'
-    }
+  id: 1,
+  title: 'Diagramas Ternarios',
+  subtitle: 'Visualización de Datos Composicionales',
+  description: 'Aplicación web para la creación y análisis de diagramas ternarios a partir de datos composicionales, con soporte para múltiples series y exportación de resultados en formatos de imagen y PDF.',
+  imagePath: 'images/imagen_Caputra_app_ternarios.png',
+  iconPath: 'images/Ternarios_icon.png',
+  technologies: [
+    { name: 'Python', iconPath: 'svg/python.svg' },
+    { name: 'Flask', iconPath: 'svg/flask.svg' },
+    { name: 'JavaScript', iconPath: 'svg/javascript.svg' },
+    
+  ],
+  demoUrl: 'https://ternariosapp.vercel.app',
+  codeUrl: 'https://github.com/charls767/ternarios' 
+},
+//
+ //   {
+  //    id: 2,
+   //   title: 'E-Commerce ',
+    //  subtitle: 'Mi obra maestra',
+     // description: 'Migración del Matrix al mundo real y hackeo del sistema ficticio para salvar a la humanidad.',
+      //imagePath: 'assets/images/matrix-hack.jpg',
+     // iconPath: 'images/py.png',
+     // technologies: [
+     //   { name: 'Binario', iconPath: 'assets/icons/binary.png' }
+     // ],
+     // demoUrl: 'https://matrix.example.com'
+    //}
+   //  
     
   ];
 
