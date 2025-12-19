@@ -30,8 +30,8 @@ export class Proyectos {
   title: 'Diagramas Ternarios',
   subtitle: 'Visualización de Datos Composicionales',
   description: 'Aplicación web para la creación y análisis de diagramas ternarios a partir de datos composicionales, con soporte para múltiples series y exportación de resultados en formatos de imagen y PDF.',
-  imagePath: 'images/imagen_Caputra_app_ternarios.png',
-  iconPath: 'images/Ternarios_icon.png',
+  imagePath: 'images/Captura_ternarios2.png', 
+  iconPath: 'images/Ternarios_Icon.png',
   technologies: [
     { name: 'Python', iconPath: 'svg/python.svg' },
     { name: 'Flask', iconPath: 'svg/flask.svg' },
