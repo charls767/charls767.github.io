@@ -1,0 +1,272 @@
+
+/* projects.component.css */
+.projects-container {
+  padding: 20px;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.projects-title {
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  margin-top: 0;
+}
+
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 20px;
+  background-color: #2a2a2a;
+  border-radius: 12px;
+  padding: 24px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.project-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.project-icon {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.project-info {
+  flex: 1;
+}
+
+.project-title {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.project-subtitle {
+  color: #888;
+  font-size: 14px;
+  margin: 0;
+  font-style: italic;
+}
+
+.project-description {
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-badge {
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+  background-color: #3a3a3a;
+  border-radius: 12px;
+  font-size: 12px;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tech-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+  object-fit: contain;
+}
+
+.tech-name {
+  white-space: nowrap;
+}
+
+.project-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.action-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: #3a3a3a;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.action-btn:hover {
+  background-color: #4a4a4a;
+  transform: scale(1.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.demo-btn:hover {
+  background-color: #2d5a27;
+}
+
+.code-btn:hover {
+  background-color: #333;
+}
+
+.github-icon {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
+.project-image {
+ width: 100%;
+  height: 300px;           /* Ajusta según necesites */
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;     /* 🔥 Centrado vertical */
+
+}
+
+
+.project-image img {
+  width: 100%;
+  height: auto;         /* o 100% con object-fit si prefieres */
+  display: block;
+  object-fit: cover;    /* para recortar y llenar el contenedor */
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projects-container {
+    padding: 16px;
+  }
+  
+  .project-card {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+  
+  .project-image {
+    height: 180px;
+    
+  }
+  
+  .project-header {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .project-icon {
+    align-self: flex-start;
+  }
+  
+  .projects-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card {
+    padding: 16px;
+  }
+  
+  .project-technologies {
+    justify-content: center;
+  }
+  
+  .project-actions {
+    justify-content: center;
+  }
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.skill-category {
+  background-color: #2a2a2a;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.category-title {
+  color: #66ccff;
+  font-size: 18px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 64px;
+}
+
+.skill-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-bottom: 6px;
+  filter: brightness(0) invert(1);
+}
+
+.skill-name {
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+}

@@ -1,0 +1,88 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- projects.component.html -->
+<div class="projects-container">
+  <h2 class="projects-title">Proyectos</h2>
+  
+  <div class="projects-grid">
+    <div 
+      *ngFor="let project of projects" 
+      class="project-card"
+    >
+      <!-- Contenido del proyecto -->
+      <div class="project-content">
+        <!-- Icono y título -->
+        <div class="project-header">
+          <img 
+            [src]="project.iconPath" 
+            [alt]="project.title + ' icon'"
+            class="project-icon"
+          >
+          <div class="project-info">
+            <h3 class="project-title">{{ project.title }}</h3>
+            <p class="project-subtitle">{{ project.subtitle }}</p>
+          </div>
+        </div>
+        
+        <!-- Descripción -->
+        <p class="project-description">{{ project.description }}</p>
+        
+        <!-- Tecnologías -->
+        <div class="project-technologies">
+          <div 
+            *ngFor="let tech of project.technologies" 
+            class="tech-badge"
+          >
+            <img 
+              [src]="tech.iconPath" 
+              [alt]="tech.name + ' icon'"
+              class="tech-icon"
+            >
+            <span class="tech-name">{{ tech.name }}</span>
+          </div>
+        </div>
+        
+        <!-- Botones de acción -->
+        <div class="project-actions">
+          <button 
+            *ngIf="project.demoUrl"
+            class="action-btn demo-btn"
+            (click)="openLink(project.demoUrl)"
+          >
+            🔗
+          </button>
+          <button 
+            *ngIf="project.codeUrl"
+            class="action-btn code-btn"
+            (click)="openLink(project.codeUrl)"
+          >
+            <img src="svg/github_light.svg" alt="GitHub" class="github-icon">
+          </button>
+        </div>
+      </div>
+      
+      <!-- Imagen del proyecto -->
+      <div class="project-image">
+        <img 
+          [src]="project.imagePath" 
+          [alt]="project.title"
+          (error)="onImageError($event)"
+        >
+      </div>
+    </div>
+  </div>
+  
+</div>
