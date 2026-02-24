@@ -9,10 +9,10 @@
     </p>
 
     <div class="contact">
-      <a href="mailto:caacevedo&#64;unal.edu.co" class="email-btn">
+      <button (click)="copiarCorreo()" class="email-btn" title="Click para copiar email">
         <img src="images/email.png" alt="Correo" class="icon">
         caacevedo&#64;unal.edu.co
-      </a>
+      </button>
 
       <div class="icons">
         <!-- GitHub -->
@@ -40,3 +40,8 @@
     />
   </section>
 </section>
+
+<!-- Copy Notification -->
+<div class="copy-notification" [class.show]="copyNotification.show">
+  {{ copyNotification.message }}
+</div>

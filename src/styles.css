@@ -53,15 +53,105 @@ body.flash-effect {
 .header-content {
   text-align: left;
 }
-.PrimerPlano {
-  background-color: #121212;
-  max-width: 750px;
-  margin: 40px auto;
+
+/* Animación de entrada para secciones */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.PrimerPlano {
+  background: linear-gradient(135deg, #0a0a0a 0%, #121212 100%);
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0;
+  animation: fadeInDown 0.8s ease-out;
+}
+
 .AlgoSobreMi {
-  background-color: #121212;
-  max-width: 750px;
-  margin: 40px auto;
-  padding: 1px;
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 40px;
   z-index: 1000;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  animation: slideInUp 0.8s ease-out 0.2s both;
+}
+
+.backseparador {
+  animation: slideInUp 0.8s ease-out 0.4s both;
+}
+
+.Proyectos {
+  background: linear-gradient(135deg, #121212 0%, #0a0a0a 100%);
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 40px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  animation: slideInUp 0.8s ease-out 0.6s both;
+}
+
+.Tecnologias {
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 40px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  animation: slideInUp 0.8s ease-out 0.8s both;
+}
+
+/* Separador mejorado */
+.Separador {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  margin: 40px auto;
+  max-width: 90%;
+  animation: slideInUp 0.8s ease-out 0.4s both;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f0f0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #444444;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #666666;
 }

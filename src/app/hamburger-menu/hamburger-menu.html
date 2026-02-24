@@ -1,0 +1,17 @@
+<div class="hamburger-container">
+  <button class="hamburger-button" [class.open]="isOpen" (click)="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav class="menu" [class.open]="isOpen">
+    <ul class="menu-list">
+      <li *ngFor="let item of menuItems" class="menu-item">
+        <button (click)="navigateTo(item.id)" class="menu-link">
+          {{ item.label }}
+        </button>
+      </li>
+    </ul>
+  </nav>
+</div>

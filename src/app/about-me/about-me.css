@@ -1,19 +1,30 @@
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .sobre-mi {
-  background-color: #121212;
+  background: linear-gradient(135deg, rgba(18, 18, 18, 0.8) 0%, rgba(15, 15, 15, 0.9) 100%);
   color: #eee;
   padding: 40px 30px;
-  border-radius: 10px;
-  max-width: 750px;
-  margin: 40px auto;
+  border-radius: 12px;
   font-family: 'Courier New', Courier, monospace;
-
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  animation: slideInUp 0.8s ease-out;
 }
 
 .sobre-mi .titulo {
+  color: white;
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 20px;
-  color: #fff;
   text-align: left;
 }
 

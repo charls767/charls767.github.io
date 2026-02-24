@@ -1,0 +1,11 @@
+<nav class="breadcrumb-nav" [class.visible]="isVisible">
+  <ol class="breadcrumb-list">
+    <li *ngFor="let section of sections" 
+        class="breadcrumb-item"
+        [class.active]="isActive(section.id)">
+      <button (click)="navigate(section.id)" class="breadcrumb-link">
+        {{ section.label }}
+      </button>
+    </li>
+  </ol>
+</nav>

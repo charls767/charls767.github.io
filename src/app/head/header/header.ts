@@ -9,12 +9,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.css'] 
 })
 export class HeaderComponent {
+  copyNotification = { show: false, message: '' };
+
   copiarCorreo(): void {
     const correo = 'caacevedo@unal.edu.co';
     navigator.clipboard.writeText(correo).then(() => {
-      alert('Correo copiado al portapapeles');
+      this.showNotification('¡Correo copiado!');
     }).catch(err => {
+      this.showNotification('Error al copiar', true);
       console.error('Error al copiar el correo: ', err);
     });
+  }
+
+  private showNotification(message: string, isError = false) {
+    this.copyNotification.message = message;
+    this.copyNotification.show = true;
+    
+    setTimeout(() => {
+      this.copyNotification.show = false;
+    }, 2000);
   }
 }

@@ -1,23 +1,40 @@
-<section class="PrimerPlano">
+<app-hamburger-menu></app-hamburger-menu>
+
+<app-breadcrumb-nav></app-breadcrumb-nav>
+
+<section class="PrimerPlano" appParallax>
   <section class="header-container">
     <app-header></app-header>
   </section>
-  <section class="AlgoSobreMi">
+  <section class="AlgoSobreMi" appAnimatedScroll>
     <app-about-me></app-about-me>
+  </section>
 </section>
-</section>
-
 
 <section class="backseparador">
   <hr class="Separador">
- </section>
- <section class="Proyectos">
-  <app-proyectos> </app-proyectos>
 </section>
 
-<section class="Tecnologias"> 
-  <app-tecnologias> </app-tecnologias>
+<section class="Proyectos" appAnimatedScroll appParallax>
+  <app-proyectos></app-proyectos>
 </section>
-<section>
+
+<section class="backseparador">
+  <hr class="Separador">
 </section>
-<app-formacion></app-formacion>
+
+<section class="Tecnologias" appAnimatedScroll appParallax>
+  <app-tecnologias></app-tecnologias>
+</section>
+
+<section class="backseparador">
+  <hr class="Separador">
+</section>
+
+<div appAnimatedScroll appParallax>
+  <app-formacion></app-formacion>
+</div>
+
+<app-footer></app-footer>
+
+<app-scroll-to-top></app-scroll-to-top>
