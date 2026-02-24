@@ -41,7 +41,7 @@ export class Proyectos {
   demoUrl: 'https://ternariosapp.vercel.app',
   codeUrl: 'https://github.com/charls767/ternarios' 
 },
-<<<<<<< HEAD
+
 
 {
   id: 2,
@@ -61,7 +61,7 @@ export class Proyectos {
   demoUrl: 'https://datasciencetep.vercel.app'
   
 }
-=======
+
 //
  //   {
   //    id: 2,
@@ -76,8 +76,7 @@ export class Proyectos {
      // demoUrl: 'https://matrix.example.com'
     //}
    //  
->>>>>>> 9b5ea4fbe80901dd12cd39f7c482d5b672a38c21
-    
+
   ];
 
 
