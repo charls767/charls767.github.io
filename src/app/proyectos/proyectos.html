@@ -28,17 +28,17 @@
         <div class="project-header">
           <img 
             [src]="project.iconPath" 
-            [alt]="project.title + ' icon'"
+            [alt]="project.titleKey + ' icon'"
             class="project-icon"
           >
           <div class="project-info">
-            <h3 class="project-title">{{ project.title }}</h3>
-            <p class="project-subtitle">{{ project.subtitle }}</p>
+            <h3 class="project-title">{{ project.titleKey | translate }}</h3>
+            <p class="project-subtitle">{{ project.subtitleKey | translate }}</p>
           </div>
         </div>
         
         <!-- Descripción -->
-        <p class="project-description">{{ project.description }}</p>
+        <p class="project-description">{{ project.descriptionKey | translate }}</p>
         
         <!-- Tecnologías -->
         <div class="project-technologies">
@@ -82,7 +82,7 @@
       <div class="project-image">
         <img 
           [src]="project.imagePath" 
-          [alt]="project.title"
+          [alt]="project.titleKey"
           (error)="onImageError($event)"
         >
       </div>

@@ -2,13 +2,14 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../services/language.service';
 import { TranslatePipe } from '../services/translate.pipe';
+import { translations } from '../services/translations';
 
 interface FormacionItem {
   icono: string;
-  titulo: string;
-  descripcion: string;
-  subdescripcion: string;
-  estado: string;
+  tituloKey: string;
+  institucionKey: string;
+  descKey: string;
+  estadoKey: string;
   escudo: string;
 }
 
@@ -25,27 +26,32 @@ export class Formacion {
   formaciones: FormacionItem[] = [
     {
       icono: '🧪',
-      titulo: 'Ingenierio Quimico',
-      descripcion: 'Universidad Nacional de Colombia',
-      subdescripcion: "Orientado al análisis, simulación y automatización de procesos químicos e industriales.",
-      estado: 'Terminada',
+      tituloKey: 'ingQuimicoTitulo',
+      institucionKey: 'ingQuimicoInstitucion',
+      descKey: 'ingQuimicoDesc',
+      estadoKey: 'terminada',
       escudo: '🎓'
     },
     {
-     icono: '💻',
-    titulo: 'Ingeniería de Sistemas',
-    descripcion: 'Universidad Nacional de Colombia',
-    subdescripcion: 'Formación complementaria en desarrollo de software, simulación e inteligencia artificial.',
-    estado: 'En curso',
-    escudo: '🎓'
+      icono: '💻',
+      tituloKey: 'ingSistemasTitulo',
+      institucionKey: 'ingSistemasInstitucion',
+      descKey: 'ingSistemasDesc',
+      estadoKey: 'enCurso',
+      escudo: '🎓'
     },
     {
-    icono: '📚',
-    titulo: 'Formación complementaria en programación y ciencia de datos',
-    descripcion: 'Plataformas: Udemy, DataCamp, Coursera',
-    subdescripcion: 'Cursos avanzados en desarrollo de aplicaciones web modernas con Angular, Node.js, FastAPI y arquitecturas RESTful; procesamiento de datos con Python, visualización, y fundamentos de machine learning.',
-    estado: 'Finalizado',
-    escudo: '🏅'
-  }
+      icono: '📚',
+      tituloKey: 'formacionCompTitulo',
+      institucionKey: 'formacionCompInstitucion',
+      descKey: 'formacionCompDesc',
+      estadoKey: 'finalizado',
+      escudo: '🏅'
+    }
   ];
+
+  getTranslatedText(key: string): string {
+    const lang = this.languageService.getCurrentLanguage();
+    return translations[lang][key as keyof typeof translations['es']] || key;
+  }
 }

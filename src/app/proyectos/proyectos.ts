@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../services/language.service';
 import { TranslatePipe } from '../services/translate.pipe';
+import { translations } from '../services/translations';
 
 interface Technology {
   name: string;
@@ -10,9 +11,9 @@ interface Technology {
 }
 interface Project {
   id: number;
-  title: string;
-  subtitle: string;
-  description: string;
+  titleKey: string;
+  subtitleKey: string;
+  descriptionKey: string;
   imagePath: string;
   technologies: Technology[];
   demoUrl?: string;
@@ -28,61 +29,62 @@ interface Project {
 })
 export class Proyectos {
   constructor(public languageService: LanguageService) {}
+  
   projects: Project[] = [
     {
-  id: 1,
-  title: 'Diagramas Ternarios',
-  subtitle: 'Visualización de Datos Composicionales',
-  description: 'Aplicación web para la creación y análisis de diagramas ternarios a partir de datos composicionales, con soporte para múltiples series y exportación de resultados en formatos de imagen y PDF.',
-  imagePath: 'images/Captura_ternarios2.png', 
-  iconPath: 'images/Ternarios_Icon.png',
-  technologies: [
-    { name: 'Python', iconPath: 'svg/python.svg' },
-    { name: 'Flask', iconPath: 'svg/flask.svg' },
-    { name: 'JavaScript', iconPath: 'svg/javascript.svg' },
-    
-  ],
-  demoUrl: 'https://ternariosapp.vercel.app',
-  codeUrl: 'https://github.com/charls767/ternarios' 
-},
-
-
-{
-  id: 2,
-  title: 'Clasificador de Fallas en el TEP',
-  subtitle: 'Tennessee Eastman Process (TEP)',
-  description:
-    'Modelo de clasificación multiclase para la detección automática de fallas (IDV0–IDV21) en el Tennessee Eastman Process usando Random Forest y técnicas avanzadas de Machine Learning sobre ~1.1M muestras y 52 variables de proceso.',
-  imagePath: 'images/TEP.png', // ajusta al nombre real de tu imagen
-  iconPath: 'images/TEP-logo.png', // ajusta al nombre real de tu icono
-  technologies: [
-    { name: 'Python',        iconPath: 'svg/python.svg' },
-    { name: 'pandas',        iconPath: 'images/pandas.png' },
-    { name: 'scikit-learn',  iconPath: 'images/Scikit_learn_logo_small.png' },
-    { name: 'NumPy',         iconPath: 'images/numpy-logo.png' },
-    { name: 'Matplotlib',    iconPath: 'images/matplotlib.png' },
-  ],
-  demoUrl: 'https://datasciencetep.vercel.app'
-  
-}
-
-//
- //   {
-  //    id: 2,
-   //   title: 'E-Commerce ',
-    //  subtitle: 'Mi obra maestra',
-     // description: 'Migración del Matrix al mundo real y hackeo del sistema ficticio para salvar a la humanidad.',
-      //imagePath: 'assets/images/matrix-hack.jpg',
-     // iconPath: 'images/py.png',
-     // technologies: [
-     //   { name: 'Binario', iconPath: 'assets/icons/binary.png' }
-     // ],
-     // demoUrl: 'https://matrix.example.com'
-    //}
-   //  
-
+      id: 1,
+      titleKey: 'tepTitulo',
+      subtitleKey: 'tepSubtitulo',
+      descriptionKey: 'tepDescripcion',
+      imagePath: 'images/TEP.png',
+      iconPath: 'images/TEP-logo.png',
+      technologies: [
+        { name: 'Python', iconPath: 'svg/python.svg' },
+        { name: 'pandas', iconPath: 'images/pandas.png' },
+        { name: 'scikit-learn', iconPath: 'images/Scikit_learn_logo_small.png' },
+        { name: 'NumPy', iconPath: 'images/numpy-logo.png' },
+        { name: 'Matplotlib', iconPath: 'images/matplotlib.png' },
+      ],
+      demoUrl: 'https://datasciencetep.vercel.app',
+      codeUrl: 'https://github.com/charls767/datascience_tep'
+    },
+    {
+      id: 2,
+      titleKey: 'pidTitulo',
+      subtitleKey: 'pidSubtitulo',
+      descriptionKey: 'pidDescripcion',
+      imagePath: 'images/PID_controller.png',
+      iconPath: 'images/PID_logo.png',
+      technologies: [
+        { name: 'Python', iconPath: 'svg/python.svg' },
+        { name: 'Streamlit', iconPath: 'images/streamlit.png' },
+        { name: 'python-control', iconPath: 'images/control-lib.jpg' },
+      ],
+      demoUrl: 'https://pid-controller-tuner.streamlit.app/',
+      codeUrl: 'https://github.com/charls767/PID-Controller-Tuner'
+    },
+    {
+      id: 3,
+      titleKey: 'ternariosTitulo',
+      subtitleKey: 'ternariosSubtitulo',
+      descriptionKey: 'ternariosDescripcion',
+      imagePath: 'images/Captura_ternarios2.png',
+      iconPath: 'images/Ternarios_Icon.png',
+      technologies: [
+        { name: 'Python', iconPath: 'svg/python.svg' },
+        { name: 'Flask', iconPath: 'svg/flask.svg' },
+        { name: 'JavaScript', iconPath: 'svg/javascript.svg' },
+      ],
+      demoUrl: 'https://ternariosapp.vercel.app',
+      codeUrl: 'https://github.com/charls767/ternarios'
+    }
   ];
 
+  // Método para obtener el texto traducido
+  getTranslatedText(key: string): string {
+    const lang = this.languageService.getCurrentLanguage();
+    return translations[lang][key as keyof typeof translations['es']] || key;
+  }
 
   // Método para agregar nuevo proyecto
   addProject(project: Project): void {
