@@ -7,18 +7,20 @@ export type Language = 'es' | 'en';
   providedIn: 'root'
 })
 export class LanguageService {
-  private currentLanguage = new BehaviorSubject<Language>(
-    (localStorage.getItem('language') as Language) || 'es'
-  );
+  private currentLanguage: BehaviorSubject<Language>;
 
-  public language$: Observable<Language> = this.currentLanguage.asObservable();
+  public language$: Observable<Language>;
 
   constructor() {
-    // Sincronizar el idioma con el almacenamiento local
-    this.language$.subscribe(lang => {
-      localStorage.setItem('language', lang);
-      document.documentElement.lang = lang;
-    });
+    // Obtener idioma de localStorage o usar español por defecto
+    const savedLanguage = localStorage.getItem('language');
+    const initialLanguage: Language = (savedLanguage === 'en' ? 'en' : 'es');
+    
+    this.currentLanguage = new BehaviorSubject<Language>(initialLanguage);
+    this.language$ = this.currentLanguage.asObservable();
+
+    // Establecer el idioma inicial
+    this.setLanguage(initialLanguage);
   }
 
   getCurrentLanguage(): Language {
@@ -26,9 +28,10 @@ export class LanguageService {
   }
 
   setLanguage(lang: Language): void {
-    if (lang !== this.currentLanguage.value) {
-      this.currentLanguage.next(lang);
-    }
+    // Siempre actualizar el idioma
+    this.currentLanguage.next(lang);
+    localStorage.setItem('language', lang);
+    document.documentElement.lang = lang;
   }
 
   toggleLanguage(): void {

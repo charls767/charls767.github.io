@@ -212,9 +212,13 @@ export class LanguageSelectorComponent implements OnInit, OnDestroy {
   isExpanded = false;
   private destroy$ = new Subject<void>();
 
-  constructor(private languageService: LanguageService) {}
+  constructor(private languageService: LanguageService) {
+    // Inicializar con el idioma actual del servicio
+    this.currentLanguage = this.languageService.getCurrentLanguage();
+  }
 
   ngOnInit(): void {
+    // Suscribirse a cambios de idioma
     this.languageService.language$
       .pipe(takeUntil(this.destroy$))
       .subscribe(lang => {
