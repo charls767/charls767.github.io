@@ -61,6 +61,7 @@ export class Tecnologias {
         { name: 'Selenium', iconPath: 'images/selenium.png', color: '#1f1f1f' },
         { name: 'Simul8', iconPath: 'images/simul8.png', color: '#1f1f1f' },
          { name: 'Latex', iconPath: 'images/latex.png', color: '#1f1f1f' },
+         {name:'streamlit',iconPath:'images/streamlit.png',color:'#1f1f1f'}
       ]
     }
   ];

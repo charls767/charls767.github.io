@@ -1,8 +1,10 @@
 import { Component, HostListener, ViewChild, ElementRef } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-scroll-to-top',
   standalone: true,
+  imports: [CommonModule],
   templateUrl: './scroll-to-top.html',
   styleUrls: ['./scroll-to-top.css']
 })

@@ -25,26 +25,11 @@ interface Project {
 })
 export class Proyectos {
   projects: Project[] = [
-    {
-  id: 1,
-  title: 'Diagramas Ternarios',
-  subtitle: 'Visualización de Datos Composicionales',
-  description: 'Aplicación web para la creación y análisis de diagramas ternarios a partir de datos composicionales, con soporte para múltiples series y exportación de resultados en formatos de imagen y PDF.',
-  imagePath: 'images/Captura_ternarios2.png', 
-  iconPath: 'images/Ternarios_Icon.png',
-  technologies: [
-    { name: 'Python', iconPath: 'svg/python.svg' },
-    { name: 'Flask', iconPath: 'svg/flask.svg' },
-    { name: 'JavaScript', iconPath: 'svg/javascript.svg' },
-    
-  ],
-  demoUrl: 'https://ternariosapp.vercel.app',
-  codeUrl: 'https://github.com/charls767/ternarios' 
-},
+
 
 
 {
-  id: 2,
+  id: 1,
   title: 'Clasificador de Fallas en el TEP',
   subtitle: 'Tennessee Eastman Process (TEP)',
   description:
@@ -58,8 +43,41 @@ export class Proyectos {
     { name: 'NumPy',         iconPath: 'images/numpy-logo.png' },
     { name: 'Matplotlib',    iconPath: 'images/matplotlib.png' },
   ],
-  demoUrl: 'https://datasciencetep.vercel.app'
+  demoUrl: 'https://datasciencetep.vercel.app',
+  codeUrl: '  https://github.com/charls767/datascience_tep    '  // REVISAR ( ACTUALIZAR)
   
+},
+{
+  id: 2,
+  title: 'PID Controller Tuner',
+  subtitle: 'Sintonización automática de controladores PID',
+  description:
+    'Herramienta web interactiva para diseñar y sintonizar controladores PID a partir de modelos FOPDT (G(s)=K/(Ts+1)e^{-Ls}), aplicando métodos clásicos como Ziegler–Nichols, Cohen–Coon y amortiguamiento crítico, con simulaciones comparativas, métricas (ts, Mp, ess) y exportación de resultados en PNG, PDF y CSV.',
+  imagePath: 'images/PID_controller.png', 
+  iconPath: 'images/PID_logo.png',      
+  technologies: [
+    { name: 'Python',        iconPath: 'svg/python.svg' },
+    { name: 'Streamlit',     iconPath: 'images/streamlit.png' },
+    { name: 'python-control',iconPath: 'images/control-lib.jpg' },
+  ],
+  demoUrl: 'https://pid-controller-tuner.streamlit.app/',
+  codeUrl: 'https://github.com/charls767/PID-Controller-Tuner' 
+},
+    {
+  id: 3,
+  title: 'Diagramas Ternarios',
+  subtitle: 'Visualización de Datos Composicionales',
+  description: 'Aplicación web para la creación y análisis de diagramas ternarios a partir de datos composicionales, con soporte para múltiples series y exportación de resultados en formatos de imagen y PDF.',
+  imagePath: 'images/Captura_ternarios2.png', 
+  iconPath: 'images/Ternarios_Icon.png',
+  technologies: [
+    { name: 'Python', iconPath: 'svg/python.svg' },
+    { name: 'Flask', iconPath: 'svg/flask.svg' },
+    { name: 'JavaScript', iconPath: 'svg/javascript.svg' },
+    
+  ],
+  demoUrl: 'https://ternariosapp.vercel.app',
+  codeUrl: 'https://github.com/charls767/ternarios' 
 }
 
 //
