@@ -81,7 +81,7 @@ export class Proyectos {
   ];
 
   // Método para obtener el texto traducido
-  getTranslatedText(key: string): string {
+  getTranslatedText(key: any): string {
     const lang = this.languageService.getCurrentLanguage();
     return translations[lang][key as keyof typeof translations['es']] || key;
   }

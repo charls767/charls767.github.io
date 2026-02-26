@@ -14,8 +14,8 @@ import { takeUntil } from 'rxjs/operators';
       <button 
         class="fab-button"
         (click)="toggleMenu()"
-        [title]="'idioma' | async | translate"
-        aria-label="Cambiar idioma">
+        title="Language"
+        aria-label="Change language">
         <span class="fab-icon">🌍</span>
       </button>
 

@@ -4,12 +4,12 @@
 
     <div class="icono">{{ item.icono }}</div>
     <div class="info">
-      <strong>{{ item.tituloKey | translate }}</strong>
-      <div>{{ item.institucionKey | translate }}</div>
-      <small>{{ item.descKey | translate }}</small>
+      <strong>{{ getTranslatedText(item.tituloKey) }}</strong>
+      <div>{{ getTranslatedText(item.institucionKey) }}</div>
+      <small>{{ getTranslatedText(item.descKey) }}</small>
     </div>
     <div class="estado">
-      <span class="estado-texto">{{ item.estadoKey | translate }}</span>
+      <span class="estado-texto">{{ getTranslatedText(item.estadoKey) }}</span>
       <span class="estado-icono">{{ item.escudo }}</span>
     </div>
   </div>

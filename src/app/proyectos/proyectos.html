@@ -32,13 +32,13 @@
             class="project-icon"
           >
           <div class="project-info">
-            <h3 class="project-title">{{ project.titleKey | translate }}</h3>
-            <p class="project-subtitle">{{ project.subtitleKey | translate }}</p>
+            <h3 class="project-title">{{ getTranslatedText(project.titleKey) }}</h3>
+            <p class="project-subtitle">{{ getTranslatedText(project.subtitleKey) }}</p>
           </div>
         </div>
         
         <!-- Descripción -->
-        <p class="project-description">{{ project.descriptionKey | translate }}</p>
+        <p class="project-description">{{ getTranslatedText(project.descriptionKey) }}</p>
         
         <!-- Tecnologías -->
         <div class="project-technologies">
@@ -61,7 +61,7 @@
             *ngIf="project.demoUrl"
             class="action-btn demo-btn"
             (click)="openLink(project.demoUrl)"
-            [title]="'verDemo' | translate"
+            [title]="getTranslatedText('verDemo')"
           >
             <span class="action-icon">🔗</span>
             <span class="action-label">{{ 'verDemo' | translate }}</span>
@@ -70,7 +70,7 @@
             *ngIf="project.codeUrl"
             class="action-btn code-btn"
             (click)="openLink(project.codeUrl)"
-            [title]="'verCodigo' | translate"
+            [title]="getTranslatedText('verCodigo')"
           >
             <img src="svg/github_light.svg" alt="GitHub" class="github-icon">
             <span class="action-label">{{ 'verCodigo' | translate }}</span>
