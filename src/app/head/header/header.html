@@ -1,7 +1,12 @@
 <section class="head">
   <section class="header">
-    <h1 class="header__name">Carlos A. Acevedo</h1>
-    <h2 class="header__title">Ingeniero y Desarrollador</h2>
+    <div class="header__top">
+      <div>
+        <h1 class="header__name">Carlos A. Acevedo</h1>
+        <h2 class="header__title">{{ 'ingeniero' | translate }} - {{ 'desarrollador' | translate }}</h2>
+      </div>
+      <app-language-selector></app-language-selector>
+    </div>
 
     <p class="location">
       <img src="images/marcador-de-posicion.png" alt="Ubicación" class="icon">

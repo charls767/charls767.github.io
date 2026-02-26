@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { LanguageService } from '../services/language.service';
+import { TranslatePipe } from '../services/translate.pipe';
+
 interface Technology {
   name: string;
   iconPath: string;
@@ -13,7 +16,7 @@ interface TechCategory {
 
 @Component({
   selector: 'app-tecnologias',
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './tecnologias.html',
   styleUrl: './tecnologias.css'
 })
@@ -64,6 +67,8 @@ export class Tecnologias {
       ]
     }
   ];
+
+  constructor(public languageService: LanguageService) {}
 
   onImageError(event: any): void {
     event.target.src = 'assets/icons/default.png';

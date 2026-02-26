@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
+import { LanguageService } from '../services/language.service';
+import { TranslatePipe } from '../services/translate.pipe';
+
 interface Technology {
   name: string;
   iconPath: string;
@@ -19,11 +22,12 @@ interface Project {
 
 @Component({
   selector: 'app-proyectos',
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './proyectos.html',
   styleUrl: './proyectos.css'
 })
 export class Proyectos {
+  constructor(public languageService: LanguageService) {}
   projects: Project[] = [
     {
   id: 1,

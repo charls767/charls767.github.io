@@ -15,7 +15,7 @@
 
 <!-- projects.component.html -->
 <div class="projects-container">
-  <h2 class="projects-title">Proyectos</h2>
+  <h2 class="projects-title">{{ 'proyectosTitulo' | translate }}</h2>
   
   <div class="projects-grid">
     <div 
@@ -61,15 +61,19 @@
             *ngIf="project.demoUrl"
             class="action-btn demo-btn"
             (click)="openLink(project.demoUrl)"
+            [title]="'verDemo' | translate"
           >
-            🔗
+            <span class="action-icon">🔗</span>
+            <span class="action-label">{{ 'verDemo' | translate }}</span>
           </button>
           <button 
             *ngIf="project.codeUrl"
             class="action-btn code-btn"
             (click)="openLink(project.codeUrl)"
+            [title]="'verCodigo' | translate"
           >
             <img src="svg/github_light.svg" alt="GitHub" class="github-icon">
+            <span class="action-label">{{ 'verCodigo' | translate }}</span>
           </button>
         </div>
       </div>

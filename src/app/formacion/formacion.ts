@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { LanguageService } from '../services/language.service';
+import { TranslatePipe } from '../services/translate.pipe';
+
 interface FormacionItem {
   icono: string;
   titulo: string;
@@ -12,11 +15,13 @@ interface FormacionItem {
 @Component({
   selector: 'app-formacion',
   standalone: true,
-  imports: [CommonModule], // 👈 Agregar CommonModule aquí
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './formacion.html',
   styleUrls: ['./formacion.css']
 })
 export class Formacion {
+  constructor(public languageService: LanguageService) {}
+  
   formaciones: FormacionItem[] = [
     {
       icono: '🧪',
